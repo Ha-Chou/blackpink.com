@@ -1,0 +1,88 @@
+/* Mobile */
+@media(max-width: 740px) {
+   #nav {
+      display: block;
+   }
+   #nav li{
+    display: block;
+   }
+
+   #nav li:first-child{
+      display: inline-block;
+   }
+
+   #header {
+      overflow: hidden;
+   }
+
+   #nav .subnav {
+      position: initial;
+   }
+
+   #nav li a {
+      padding: 1px 24px;
+   }
+
+   #nav .subnav a{
+      color: #ccc;
+      padding: 5px 45px;
+   }
+
+   #header {
+      overflow: hidden;
+   }
+
+   #header .mobile-menu-btn {
+      display: block;
+   }
+
+   #header .search-icon{
+    display: none;
+   }   
+}
+
+@media (max-width: 640px){
+   .tournee{
+       flex-direction: column;
+   }
+   .ticket{
+       margin-top: 20px;
+       margin-left: 0;
+   }
+
+}
+
+@media only screen and (max-width: 700px) {
+   .responsive {
+     width: 49.99999%;
+     margin: 6px 0;
+     
+   }
+   .contact-content form #button{
+     margin-right: 0
+     }
+   .contact-content form {
+      padding: 0 20px;
+      height: auto;
+   }
+
+   .contact-content form #LastName,
+   .contact-content form #mobile{
+      margin-left: 0;
+   }
+
+   .contact-content form textarea {
+      width: 80%;
+      padding-left: 10px;
+      }
+   .section-heading {
+      font-size: 35px;
+   }
+   .header {
+      height: 70px;
+   }
+   
+ }
+
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STORE</title>
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAeFBMVEX85ev85ez75uz5z9n95+z4y9f3xNDxoLPpa4bxqLv4w9Dwma3oaIToaIHoZ4NHcEz1vcz3w9Hwprn1usr0rcD2vczqjqTuma/0tcPPQ2HPRmTeb4jmg5vWWHTUUW3ZX3vnhJ3UUW7WWHPTUW7STWrqh5/riqD3ytYzwUjrAAAAKHRSTlPn59H//uj8////4//uRPcAort8Rd7//d///cj//3X9/701shYqHtvHkd2N2QAAAPNJREFUeAHVkkWChDAQADNGFnohaJAYzv9/uJE19D51aql4kOWGbj+Y2JUsd/R4Pi54vpCHPy7wA+TBZ3hKBFYgp0T4nYQ4saRE4+I4Wwl5gSmlvl8SE1cAoOOVAHXTNIxyoWNf1rVUlLYrQXWEpJj1OsZK6Bg42wlxpX6FrOJq+CdgHgSvB61HswRr0/TlKUn+C0oxxhmdjABF4VWsFqslpAjDFmB2m5Sy1v3dHrKKsknPJnshxEDIeok0yxaPycFt0rCegRYaXjcmPhBKs6xetxlMLPdC5xiJZhzHYSe8/5er8PMUXAWoAKhOAQgQjS6ZvwBWLTrdj1JxbQAAAABJRU5ErkJggg==" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/store.css">
+  <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+
+</head>
+<body>
+  <header class="headerstore">
+    <h1>BLACKPINK STORE</h1>
+    <div class="cart-button">
+      <i class=" cart-icon ti-shopping-cart-full"></i>
+  </div>
+  </header>
+  <div id="slider"></div>
+  <main>
+    <section class="products">
+      <div class="product">
+        <img src="./assets/img/store/lightstick.jpg" alt="Blackpink Lightstick">
+        <h2>BLACKPINK LIGHTSTICK</h2>
+        <p>Price: $50</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/hoodie.jpg" alt="Blackpink Hoodie">
+        <h2>BLACKPINK HOODIE BORNPINK</h2>
+        <p>Price: $30</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="/assets/img/store/album.webp" alt="BORNPINK ALBUM BLACK VER.">
+        <h2>BORNPINK ALBUM BLACK VER.</h2>
+        <p>Price: $20</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/digipack.jpg" alt="BORN PINK STANDARD DIGIPACK">
+        <h2>BORN PINK STANDARD DIGIPACK</h2>
+        <p>Price: $26</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/jisoo doll.webp" alt="jisoo doll">
+        <h2>JISOO POP! SHUT DOWN DOLL </h2>
+        <p>Price: $15.00</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/jen doll.webp" alt="Jen doll">
+        <h2>JENNIE POP! SHUT DOWN DOLL</h2>
+        <p>Price: $15.00</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/lisa doll.webp" alt="lisa doll">
+        <h2>LISA POP! SHUT DOWN DOLL</h2>
+        <p>Price: $15.00</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+      <div class="product">
+        <img src="./assets/img/store/rose doll.webp" alt="rosé doll">
+        <h2>ROSÉ POP! SHUT DOWN DOLL</h2>
+        <p>Price: $15.00</p>
+        <button class="buy js-buy" >Buy</button>
+      </div>
+    </section>
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+          <div class="modal-close js-modal-close">
+              <i class="ti-close"></i>
+          </div>
+  
+          <header class="modal-header">
+              <i class=" modal-heading-icon ti-bag"></i>
+              Items
+          </header>
+  
+          <div class="modal-body">
+              <label for="quantity" class="modal-lable">
+                  <i class="ti-shopping-cart"></i>
+                  Number
+              </label>
+              <input id="quantity" type="text" class="modal-input"placeholder="How many?">
+  
+              <label for="email" class="modal-lable">
+                  <i class="ti-user"></i>
+                  Send to
+              </label>
+              <input id="email" type="email" class="modal-input"placeholder="Enter email...">
+              
+              <button id="buy">
+                  Pay <i class="ti-check"></i>
+              </button>
+              <button id="buy">
+                Add to Shopping-cart <i class="ti-shopping-cart"></i>
+            </button>
+          </div>
+  
+          <footer class="modal-footer">
+              <p class="modal-help">Need <a href="">help?</a></p>
+          </footer>
+      </div>
+  
+  </div>
+  <script>
+      const buyBtns = document.querySelectorAll('.js-buy')
+      const modal = document.querySelector('.js-modal')
+      const modalContainer = document.querySelector('.js-modal-container')
+      const modalClose = document.querySelector('.js-modal-close')
+      function showBuy() {
+          modal.classList.add('open')
+      }
+      function hideBuy() {
+          modal.classList.remove('open')
+      }
+          for (const buyBtn of buyBtns) {
+          buyBtn.addEventListener('click', showBuy )
+      }
+  
+      modalClose.addEventListener('click', hideBuy)
+      modal.addEventListener('click', hideBuy)
+      modalContainer.addEventListener('click', function (event) {
+          event.stopPropagation()
+      })
+  
+  </script>
+  
+  </main>
+  <footer class="footerstore">
+    <div class="container">
+      <div class="row">
+        
+        <div class="Service">
+          <h3 class="footer-heading">Customer Service</h3>
+          <ul class="footer-list">
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Shipping & Returns</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="media">
+          <h3 class="footer-heading">Social Media</h3>
+          <ul class="footer-list">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <h3 class="footer-heading">Subscribe to Our Newsletter</h3>
+          <form action="#">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      <p class="copyright">Power by <a href="">YG Ent.</a></p>
+    </div>
+    
+  </footer>
+</body>
+</html>

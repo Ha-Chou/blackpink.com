@@ -1,0 +1,338 @@
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:#f4a7ba;
+  }
+  
+  .headerstore {
+    background-color: #000;
+    color:#f4a7ba;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    box-shadow: 0 0 10px;
+    font-weight: bold;
+    z-index: 100;
+  }
+
+   .cart-icon{
+    
+    padding: 0 25px;
+    cursor: pointer;
+    right: 0;
+    color: #f4a7ba;
+    font-size: 25px;
+  }
+   .cart-button {
+    float: right;
+    cursor: pointer;
+    margin-top: -30px;
+    margin-right: -15px;
+}
+ .cart-icon:hover {
+    color:#c6bebe;
+    
+  }  
+  
+  #slider {
+  margin-top: 50px;
+  padding-top: 50%;
+  background: url('/assets/img/store/Slider\ store.webp') top center / cover no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  section.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product {
+    width: 25%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .product img {
+    width: 100%;
+  }
+  
+  .product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .buy{
+    border: none;
+    background-color: #000;
+    color:#f4a7ba;
+    padding: .5rem;
+    margin: .5rem 1rem;
+
+}
+
+.buy:hover{
+    cursor: pointer;
+    color:#000;
+    background-color:#f4a7ba;
+}
+  
+  @media (max-width: 768px) {
+    .product {
+      width: 50%;
+    }
+  }
+  @media (max-width: 576px) {
+    .product {
+      width: 100%;
+    }
+  }
+
+  .footerstore {
+    background-color:#000;
+    color:#f4a7ba;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .footer-heading  {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f4a7ba;
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #f4a7ba;
+  }
+  
+  .footer-list li {
+    margin-bottom: 10px;
+    color: #f4a7ba;
+
+  }
+  
+  .footer-list a {
+    color: #f4a7ba;
+    
+  }
+  
+  .footer-list a:hover {
+    color:#ddd;
+  }
+  #footer .copyright a:hover{
+    color:#f4a7ba;
+}
+
+  
+.copyright {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #f4a7ba;
+}
+
+.copyright p {
+  font-size: 12px;
+  color:#f4a7ba;
+}
+
+  
+  /* Responsive CSS */
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
+    .footer-heading {
+      font-size: 18px;
+    }
+  
+    .copyright p {
+      font-size: 10px;
+
+    }
+  
+  }
+  
+  @media (max-width: 576px) {
+    .footer {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    .footer-heading {
+      font-size: 14px;
+    }
+  
+    .copyright p {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 500px)  {
+    .headerstore{
+      font-size: 18px;
+      margin-left: -10px;
+    }
+      
+    
+    .cart-button {
+      padding-left: 25px;
+      margin-right: -30px;
+    }
+  }
+
+
+
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(179, 179, 179, 0.7);
+    align-items: center;
+    justify-content: center;
+    display:  none;
+
+}
+.modal.open {
+    display: flex;
+}
+
+
+.modal-container {
+    background-color:#f4a7ba;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation:  modalFadeIn ease .4s ;
+
+}
+
+.modal-header {
+    background-color:#000;
+    color:#f4a7ba;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.modal-heading-icon {
+    margin-right:16px;
+}
+
+.modal-close:hover {
+    background-color: #f4a7ba;
+    color:#000
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:#f4a7ba;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal-body {
+    padding: 17px;
+}
+
+
+
+.modal-input {
+    border: 1px solid #c6bebe;
+    width: 100%;
+    padding: 10px 0 ;
+    font-size: 16px;
+    margin-bottom: 24px;
+  
+    
+
+}
+
+.modal-label {
+    display:block;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.modal-footer {
+  background-color: #f4a7ba;
+  color: #000;
+}
+
+#buy {
+    background-color: #000;
+    color:#f4a7ba;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    cursor: pointer;
+    border-style:inset;
+    border-color: #f4a7ba;
+    border-width: 1px;
+}
+
+#buy:hover {
+    opacity: 0.5;
+    
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+       transform: translateY(-140px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+ 
+
+
+
+
